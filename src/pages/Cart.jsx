@@ -84,8 +84,8 @@ function Cart({ cartItems, updateCartItem, removeFromCart }) {
 
 Cart.propTypes = {
 	cartItems: PropTypes.array.isRequired,
-	updateCartItem: PropTypes.func.isRequired,
-	removeFromCart: PropTypes.func.isRequired,
+	updateCartItem: PropTypes.func,
+	removeFromCart: PropTypes.func,
 };
 
 export default Cart;
