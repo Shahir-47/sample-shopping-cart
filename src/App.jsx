@@ -9,7 +9,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
-import Error from "./pages/Error"; // New error page component
+import Error from "./pages/Error";
 import "./App.css";
 
 function App() {
@@ -60,7 +60,16 @@ function App() {
 						/>
 					}
 				/>
-				<Route path="/cart" element={<Cart cartItems={cartItems} />} />
+				<Route
+					path="/cart"
+					element={
+						<Cart
+							cartItems={cartItems}
+							updateCartItem={updateCartItem}
+							removeFromCart={removeFromCart}
+						/>
+					}
+				/>
 				<Route path="*" element={<Error />} />
 			</Routes>
 		</Router>
